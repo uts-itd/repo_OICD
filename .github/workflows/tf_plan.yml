@@ -24,7 +24,7 @@ jobs:
       - name: configure aws credentials
         uses: aws-actions/configure-aws-credentials@v1 
         with:
-          role-to-assume: 
+          role-to-assume: arn:aws:iam::046955552049:role/team_lucky_oidc_s3_bucket
           role-session-name: rolesession
           aws-region: ap-southeast-2
           
