@@ -1,13 +1,8 @@
 # Sample workflow to access AWS resources when workflow is tied to branch
 
-name: Terraform Apply
+name: Terraform Destroy
 on:
   workflow_dispatch: # This allows workflow to be run on-demand
-    branches: 
-      - master 
-        # push:
-        #branches:
-        #- master
 
 permissions:
       id-token: write
@@ -23,7 +18,7 @@ jobs:
       - name: configure aws credentials
         uses: aws-actions/configure-aws-credentials@v1 
         with:
-          role-to-assume: 
+          role-to-assume: arn:aws:iam::046955552049:role/team_lucky_oidc_s3_bucket
           role-session-name: rolesession
           aws-region: ap-southeast-2
           
@@ -50,4 +45,4 @@ jobs:
         continue-on-error: true
 
       - name: Terraform Apply
-        run: terraform apply -auto-approve -input=false        
+        run: terraform apply -auto-approve -input=false -destroy
