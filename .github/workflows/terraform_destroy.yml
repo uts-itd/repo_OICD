@@ -1,6 +1,6 @@
 # Sample workflow to access AWS resources when workflow is tied to branch
 
-name: Terraform Destroy
+name: Tf Destroy
 on:
   workflow_dispatch: # This allows workflow to be run on-demand
 
@@ -18,7 +18,7 @@ jobs:
       - name: configure aws credentials
         uses: aws-actions/configure-aws-credentials@v1 
         with:
-          role-to-assume: arn:aws:iam::046955552049:role/team_lucky_oidc_s3_bucket
+          role-to-assume: 
           role-session-name: rolesession
           aws-region: ap-southeast-2
           
