@@ -1,5 +1,5 @@
 resource "aws_s3_bucket" "s3_bucket" {
-  bucket = "arshibutcket"
+  bucket = "arshibucket123"
   acl    = "public-read"
   policy = file("policy.json")
 
