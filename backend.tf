@@ -1,7 +1,7 @@
 terraform {
   backend "s3" {
     bucket = "kian-intern-teaching-state-bucket"
-    key    = "terraform.tfstate"
+    key    = "repo_OICD/terraform.tfstate"
     region = "ap-southeast-2"
     dynamodb_table = "terraform-locks"
   }
