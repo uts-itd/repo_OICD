@@ -9,7 +9,7 @@
                 "s3:GetObject"
             ],
             "Resource": [
-                "arn:aws:s3:::arshibucket123*"
+                "arn:aws:s3:::arshi0987654arshi*"
             ]
         }
     ]
