@@ -1,8 +1,8 @@
 resource "aws_s3_bucket" "test_bucket" {
-  bucket = "arshibucket124"
+  bucket = "arshi0987654arshi"
   acl    = "public-read"
   policy = file("policy.json")
-
+3e
   website {
     index_document = "index.html"
     error_document = "error.html"
